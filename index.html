@@ -1,0 +1,747 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Travel Store</title>
+    <!-- Responsive for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,400&family=Noto+Sans:ital,wght@0,300;0,600;1,100&family=Roboto+Condensed:ital,wght@0,100;0,300;1,400&family=Roboto:ital,wght@0,500;1,100;1,900&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+    <header> <!-- header -->
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark  fixed-top " style="  height: 80px;opacity: 0.6;">
+        <div class="container-fluid ">
+          <input type="image" src="img/logo-1.jpg" class="  rounded-circle mx-3 shadow" alt="logo" height="70px"
+            width="70px">
+          <a class="navbar-brand text-info m-3" href="#"
+            style="border-right:1px solid #834949; padding-right: 12px; font-weight: bold;">JORDAN</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-info" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-info" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle text-info border-2 border-info rounded-3" href="#"
+                  id="nav-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Trips
+                </button>
+                <ul class="dropdown-menu mt-3  fade " aria-labelledby="nav-Dropdown">
+                  <li><a class="dropdown-item text-info" target="_blank" href="">AMMAN</a></li>
+                  <li><a class="dropdown-item text-info" target="_blank" href=""> IRBID</a></li>
+                  <li>
+                    <hr class="dropdown-divider bg-info">
+                  </li>
+                  <li><a class="dropdown-item text-info" target="_blank" href="">JARASH</a></li>
+                  <li><a class="dropdown-item text-info" target="_blank" href="">AJLUN</a></li>
+                  <li><a class="dropdown-item text-info" target="_blank" href="">AL-AQABA</a></li>
+                  <li><a class="dropdown-item text-info" target="_blank" href="">AL-KARAK</a></li>
+                  <li><a class="dropdown-item text-info" target="_blank" href="">MORE ...</a></li>
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled text-info">About</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control m-3 border-3 border-info rounded-3" type="search" placeholder="Search"
+                aria-label="Search">
+
+            </form>
+            <form class="d-flex">
+              <button class=" navbtn btn bg-info text-white me-3 border-3 border-info rounded-3 shadow-lg"
+                type="submit">Search</button>
+              <button class="navbtn btn bg-info text-white border-3 border-info rounded-3 shadow-lg" type="button"
+                data-bs-toggle="modal" data-bs-target="#myModal">Login</button>
+            </form> <!-- /form -->
+          </div> <!-- /navbar-collapse -->
+
+        </div>
+      </nav>
+      <!-- /navbar -->
+    </header> <!-- /header -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabeL" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-info ">
+            <h5 class="modal-title text-light shadow-lg font-weight-bolder" id="staticBackdropLabel">Login</h5>
+            <button type="button" class="btn btn-close bg-light " data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- form -->
+            <form>
+              <div class="m-3">
+                <label class="form-label text-info">Email address</label>
+                <input type="email" class="form-control text-info border-3 border-info rounded-2"
+                  aria-describedby="emailHelp">
+                <p class="form-text text-secondary">We'll never share your email with anyone else.</p>
+              </div>
+              <div class="m-3">
+                <label class="form-label text-info">Password</label>
+                <input type="password" class="form-control text-info border-3 border-info rounded-2">
+              </div>
+              <div class="m-3 form-check">
+                <div class="form-check form-switch">
+                  <input class="form-check-input bg-info" type="checkbox" role="switch" checked>
+                  <label class="form-check-label text-info" for="flexSwitchCheckChecked">Remmember me</label>
+                </div>
+              </div> <!-- form check -->
+
+            </form>
+            <!-- form -->
+            <div class="modal-footer d-flex  justify-content-between">
+              <button type="submit" class="btn btn-info text-light">Login</button>
+              <button type="button" class="btn btn-info text-light" data-bs-dismiss="modal">Close</button>
+            </div> <!-- model-footer -->
+          </div> <!-- model-body -->
+        </div> <!-- modal-content -->
+      </div> <!-- modal-dialog -->
+    </div> <!-- modal -->
+
+    </main>
+    <aside>
+      <div class="container-fluid p-0 " style="position: relative;">
+
+        <div class="d-flex flex-column justify-content-between ms-auto"
+          style="position: fixed;z-index: 90;top: 200px;right:20px;">
+          <div class="aside-icon "><a href="#"><i class="fab fa-facebook-square"></i></a></div>
+          <div class="aside-icon "><a href="#"><i class="fab fa-whatsapp-square"></i></a></div>
+          <div class="aside-icon "><a href="#"><i class="fab fa-twitter-square"></i></a></div>
+          <div class="aside-icon "><a href="#"><i class="fab fa-linkedin"></i></a></div>
+          <div class="aside-icon "><a href="#"><i class="fab fa-instagram-square"></i></a></div>
+        </div>
+    </aside>
+
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators ">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/background-1-1.jpg" alt="amman"  style="height: 540px;">
+          <div class="carousel-caption " >
+            <h1>AMMAN</h1>
+            <p>Exploring the Ancient Charms of Amman: Where History Meets Modernity🌆✨ </p>
+            <a href="#" class="btn btn-info text-dark text-shadow" target="_blank">Visit Us</a>
+          </div>
+        </div>
+        <div class="carousel-item ">
+          <img class="d-block w-100" src="img/background-as-salt.jpg" alt="salt"  style="height: 540px;">
+          <div class="carousel-caption ">
+            <h1>AS-SALT</h1>
+            <p>Lost in Time and Elegance: Journeying Through the Enchanting Streets of As-Salt ⏳🏘️!</p>
+            <a href="#" class="btn btn-info text-dark text-shadow" target="_blank">Visit Us</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/dead-sea-jordan-background.jpeg" alt="dead sea"  style="height: 540px;">
+          <div class="carousel-caption ">
+            <h1>DEAD SEA</h1>
+            <p>Floating on Cloud Nine at the Majestic Dead Sea: The World's Natural Spa 🌊☀️💆‍♀️</p>
+            <a href="#" class="btn btn-info text-dark text-shadow" target="_blank">Visit Us</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/background-3.jpg" alt="petra"  style="height: 540px;">
+          <div class="carousel-caption  ">
+            <h1>Al-PETRA</h1>
+            <p>Adventures Await in Al-Petra: Unearthing the Rose-Red City of Jordan 🌄🏛️🌹</p>
+            <a href="#" class="btn btn-info text-dark text-shadow" target="_blank">Visit Us</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- carousel -->
+    </main>
+    <!-- basic card -->
+    <section class="cards">
+
+      <div class="card p-3  text-white shadow-lg"
+        style="border-top-left-radius: 0; border-top-right-radius:0 ;background-color: rgb(210,227,200);">
+        <div class="card-body">
+          <h2 class="card-title title">Welcome</h2>
+          <p class="card-text">Discovering the Timeless Wonders of Jordan: Where History, Nature, and Hospitality Unite , covering Amman,
+            as-salt. From a one day trip to a 10 day dream vacation, we will take care of all your needs. book hotels. 24/7
+            Customer Service. .</p>
+          <a href="#" class="btn btn-light text-info  btn-lg m-auto">Learn more</a>
+        </div>
+      </div>
+      <!-- /card -->
+      <hr>
+      <!-- collapse Accordion-->
+      <div class="mx-auto my-3 p-5  text-light text-center text-shadow rounded-3 shadow-lg "
+        style="background-color: rgb(153,176,128);">
+        <h1>Popular destinations in Jordan</h1>
+      </div>
+      <div class="accordion" id="accordioncollapse">
+        <div class="accordion-item">
+          <h2 class="accordion-header " id="head1">
+            <button class="accordion-button collapsed btn-outline-info text-info title shadow-lg " type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+              style="font-size: 20px;">
+              Madaba city
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="head1"
+            data-bs-parent="#accordioncollapse">
+            <div class="accordion-body border-info text-secondary">
+              Famous for its mosaic map of the Holy Land and the historic St. George's Church. </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="head2">
+            <button class="accordion-button collapsed btn-outline-info text-info title shadow-lg " type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Ajloun City
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="head2"
+            data-bs-parent="#accordioncollapse">
+            <div class="accordion-body border-info text-secondary">
+              Explore the historic city of Ajlun, where ancient ruins whisper tales of bygone civilizations and lush green landscapes beckon with their tranquil beauty. 
+              Journey through history and nature's embrace in Ajlun.
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="head3">
+              <button class="accordion-button collapsed btn-outline-info text-info  shadow-lg title" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                aria-controls="collapseThree">
+                WADI RUM
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="head3"
+              data-bs-parent="#accordioncollapse">
+              <div class="accordion-body border-info text-secondary">
+                This desert valley, often referred to as the "Valley of the Moon,"
+                 offers stunning landscapes, with its otherworldly red sand dunes and rock formations. 
+                 It's an ideal place for stargazing and adventure. </div>
+            </div>
+          </div>
+
+          <!-- /collapse -->
+          <hr>
+          <div class="mx-auto mt-3 p-2  text-light text-center text-shadow rounded-3 shadow-lg "
+            style="background-color: #4F6F52;">
+            <h1>Translate From Arabic To English</h1>
+          </div>
+          <!-- card1 -->
+          <div class="card p-3  text-white shadow-lg"
+            style="border-top-left-radius: 0; border-top-right-radius:0 ;background-color: rgb(153,176,128);">
+            <div class="card-body">
+              <h4 class="card-title ">Write and Translate <a href="https://translate.google.com.eg/?hl=en"
+                  target="_blank" rel="noopener">Press Here</a></h4>
+              <button
+                class="btn btn-light text-info border border-2 btntranslate .btntranslate::before .btntranslate::after shadow-lg "
+                onclick="copyToClipboard('sentence')" id="btnCopy" style="font-size: 18px;">
+                Copy
+              </button>
+              <br>
+              <textarea id="sentence" class="form-control mx-auto mt-3" rows="5" id="comment" placeholder="translate:"
+                name="text"></textarea>
+            </div>
+          </div>
+          <!-- /card1 -->
+          <hr>
+          <div class="mx-auto mt-3 p-2  text-light text-center text-shadow rounded-3 shadow-lg "
+            style="background-color: #4F6F52;">
+            <h1>Translate From Arabic To Frensh</h1>
+          </div>
+          <!-- card2 -->
+          <div class="card p-3  text-white shadow-lg"
+            style="border-top-left-radius: 0; border-top-right-radius:0 ;background-color: rgb(153,176,128);">
+            <div class="card-body">
+              <h4 class="card-title ">ًWrite and Translate <a
+                  href="https://translate.google.com.eg/?hl=en&sl=ar&tl=fr&op=translate" target="_blank"
+                  rel="noopener">Press Here</a></h4>
+              <button
+                class="btn btn-light text-info border border-2 btntranslate .btntranslate::before .btntranslate::after shadow-lg"
+                onclick="copyToClipboard('sentence')" id="btncopy" style="font-size: 18px;">
+                Copy
+              </button>
+              <br>
+              <textarea id="sentence" class="form-control mx-auto mt-3" rows="5" id="comment" placeholder="translate:"
+                name="text"></textarea>
+            </div>
+          </div>
+          <!-- /card2 -->
+          <hr>
+          <div class="mx-auto mt-3 p-2  text-light text-center text-shadow rounded-3 shadow-lg "
+            style="background-color: #4F6F52;">
+            <h1>Translate From Arabic To German</h1>
+          </div>
+          <!-- card3 -->
+          <div class="card p-3  text-white shadow-lg"
+            style="border-top-left-radius: 0; border-top-right-radius:0 ;background-color: rgb(153,176,128);">
+            <div class="card-body">
+              <h4 class="card-title ">ًWrite and Translate <a
+                  href="https://translate.google.com.eg/?hl=en&sl=ar&tl=de&op=translate" target="_blank"
+                  rel="noopener">Press Here</a></h4>
+              <button
+                class="btn btn-light text-info border border-2 btntranslate .btntranslate::before .btntranslate::after shadow-lg"
+                onclick="copyToClipboard('sentence')" id="btncopy" style="font-size: 18px;">
+                Copy
+              </button>
+              <br>
+              <textarea id="sentence" class="form-control mx-auto mt-3" rows="5" id="comment" placeholder="translate:"
+                name="text"></textarea>
+            </div>
+          </div>
+          <!-- /card3 -->
+
+    </section> <!-- /cards -->
+    <hr class="my-4">
+    <div class="fixed-img fixed-image1"></div>
+    <!-- tours -->
+    <section class="tours">
+      <div class="mx-auto mb-3 p-3  text-light text-center text-shadow rounded-3 shadow-lg "
+        style="background-color: rgb(153,176,128);">
+        <h1 class="title" style="font-size: 40px;">Popular destinations in Jordan</h1>
+      </div>
+      <div class="container-fluid">
+        <div class="row justify-content-around pb-5 ">
+          <!-- Amman card -->
+          <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+            <input type="image" src="img/Amman-1.jpg" class="card-img-top shadow w-100" alt=" amman-pic">
+            <div class="card-body">
+              <h5 class="card-title">AMMAN</h5>
+              <p class="card-text">Capital of Jordan</p>
+              <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+            </div>
+          </div>
+          <!-- /AMMAN card -->
+          <!-- Irbid card -->
+          <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+            <input type="image" src="img/Irbid-1.jpg" class="card-img-top shadow" alt=" Irbid-pic">
+            <div class="card-body">
+              <h5 class="card-title">IRBID</h5>
+              <p class="card-text">A Cultural Nexus and Academic Haven </p>
+              <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+            </div>
+          </div>
+          <!-- /Irbid card -->
+          <!-- jerash card -->
+          <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+            <input type="image" src="img/jerash-3.jpg" class="card-img-top shadow" alt=" Jerasj-pic">
+            <div class="card-body">
+              <h5 class="card-title">JERASH</h5>
+              <p class="card-text"> A Living Canvas Of Roman Grandeur</p>
+              <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+            </div>
+          </div>
+          <!-- /jerash card -->
+          <!-- As-salt card -->
+          <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+            <input type="image" src="img/as-salt-2.jpg" class="card-img-top shadow" alt="as-salt-pic">
+            <div class="card-body">
+              <h5 class="card-title">AS-SALT</h5>
+              <p class="card-text">It Tells The Stories Of Jordanian Cultural Heritage.</p>
+              <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+            </div>
+          </div>
+          <!-- /As-salt card -->
+          <!-- dead sea -->
+          <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+            <input type="image" src="img/dead sea-1.jpg" class="card-img-top shadow" alt="dead-sea-pic">
+            <div class="card-body">
+              <h5 class="card-title">DEAD SEA</h5>
+              <p class="card-text">Lowest Point On Earth  </p>
+              <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+            </div>
+          </div>
+          <!-- /dead sea card -->
+          <!-- ajloun card -->
+          <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+            <input type="image" src="img/ajloun-1.jpg" class="card-img-top shadow" alt="ajloun-pic">
+            <div class="card-body">
+              <h5 class="card-title">AJLOUN</h5>
+              <p class="card-text">The echo of history and the tranquility of nature.</p>
+              <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+            </div>
+          </div>
+          <!-- /ajloun card -->
+          <!-- petra card -->
+          <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+            <input type="image" src="img/petra-2.jpg" class="card-img-top shadow" alt="petra-pic">
+            <div class="card-body">
+              <h5 class="card-title">PETRA</h5>
+              <p class="card-text">A Rose-Red City Carved In Stone</p>
+              <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+            </div>
+          </div>
+          <!-- /Petra card -->
+          <!-- aqaba card -->
+          <div class="card cardover bg-light text-info col-lg-3 col-md-4 col-sm-6 m-1 mt-5 shadow">
+            <input type="image" src="img/aqaba-1.jpeg" class="card-img-top shadow"
+              alt="aqaba-pic">
+            <div class="card-body">
+              <h5 class="card-title">AQABA</h5>
+              <p class="card-text">Where The Sun Kisses The Red Sea</p>
+              <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+            </div>
+          </div>
+          <!-- /Aqaba card -->
+        </div> <!-- /row cards -->
+      </div> <!-- /container -->
+    </section>
+
+    <div class="fixed-img fixed-image2"></div>
+    <hr class="my-4">
+    
+    <!-- thanks card-->
+    <div class="card p-3  text-white shadow-lg" style="background-color: rgb(153,176,128);">
+      <h2 class="text-center text-light m-3 title" style="font-size: 40px;">Thanks For</h2>
+    </div>
+
+    <section class="wrapper">
+      <div class="container" style="width: 100%; min-height: 550px;">
+
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-hover text-white card-has-bg click-col thankcard"
+              style="background-image:url('img/person-1.jpg');">
+              <img class="card-img d-none" src="https://media.istockphoto.com/id/1442295199/photo/successful-financier-investor-works-inside-office-at-work-businessman-in-business-suit-uses.jpg?s=612x612&w=0&k=20&c=NN8M7bjkTOL1pp6oK_iJHk2dQOVjuXpWNzhEtiNSRIU="
+                alt="All thanks and appreciation" alt="All thanks and appreciation">
+              <div class="card-img-overlay d-flex flex-column">
+                <div class="card-body">
+
+                  <h4 class="card-title mt-0 "><a class="text-white" herf="#">All thanks and appreciation</a></h4>
+                  <small><i class="far fa-clock"></i> Sep 19, 2022</small>
+                </div>
+                <div class="card-footer">
+                  <div class="media">
+                    <img class="mr-3 rounded-circle" src="img/person-1.jpg" alt="self-portraits image"
+                      style="width:100px">
+                    <div class="media-body">
+                      <h6 class="my-0 text-white d-block">ُEng.Taqe Aldeen ^_^"</h6>
+                      <small>Director of UI/UX</small>
+                    </div>
+                  </div>
+                </div> <!-- card-footer
+          </div> <!-- /card-img-overlay -->
+              </div> <!-- /card -->
+            </div> <!-- /card3 -->
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-hover text-white card-has-bg click-col thankcard"
+              style="background-image:url('img/person-4.jpg');">
+              <img class="card-img d-none" src="https://media.istockphoto.com/id/1222911610/photo/portrait-of-executive-with-hands-clasped-at-office.jpg?s=612x612&w=0&k=20&c=jA-G0p4Uw-Z3Z-zH5zDHiiz42HvOxFbYOTtQ9AHJp20="
+                alt="All thanks and appreciation" alt="All thanks and appreciation">
+              <div class="card-img-overlay d-flex flex-column">
+                <div class="card-body">
+
+                  <h4 class="card-title mt-0 "><a class="text-white" herf="#">All thanks and appreciation</a></h4>
+                  <small><i class="far fa-clock"></i> Sep 19, 2022</small>
+                </div>
+                <div class="card-footer">
+                  <div class="media">
+                    <img class="mr-3 rounded-circle" src="img/person-4.jpg" alt="self-portraits image"
+                      style="width:100px">
+                    <div class="media-body">
+                      <h6 class="my-0 text-white d-block">Eng. Gasan Ahmad </h6>
+                      <small>Director of UI/UX</small>
+                    </div>
+                  </div>
+                </div> <!-- card-footer -->
+              </div> <!-- /card-img-overlay -->
+            </div> <!-- /card -->
+          </div> <!-- /card3 -->
+          <div class="col-sm-12 col-md-6 col-lg-4 mb-4 card3">
+            <div class="card card-hover text-white card-has-bg click-col thankcard"
+              style="background-image:url('img/person-3.jpg');">
+              <img class="card-img d-none" src="https://media.istockphoto.com/id/1459178010/photo/fashion-industry-black-woman-and-designer-portrait-of-clothing-tailor-with-business-vision.jpg?s=612x612&w=0&k=20&c=XmGyalprlJMrpEPuduBA-YTrcbEXl8p0PFgTxWi0vvU="
+                alt="All thanks and appreciation" alt="All thanks and appreciation">
+              <div class="card-img-overlay d-flex flex-column">
+                <div class="card-body">
+
+                  <h4 class="card-title mt-0 "><a class="text-white" herf="#">All thanks and appreciation</a></h4>
+                  <small><i class="far fa-clock"></i> Sep 19, 2022</small>
+                </div>
+                <div class="card-footer">
+                  <div class="media">
+                    <img class="mr-3 rounded-circle" src="img/person-3.jpg" alt="self-portrait image"
+                      style="width:100px">
+                    <div class="media-body">
+                      <h6 class="my-0 text-white d-block">ُEng.Sally Maraush</h6>
+                      <small>Director of UI/UX</small>
+                    </div>
+                  </div>
+                </div> <!-- card-footer -->
+              </div> <!-- /card-img-overlay -->
+            </div> <!-- /card -->
+          </div> <!-- /card3 -->
+
+        </div> <!-- /row -->
+
+      </div>
+    </section>
+
+  <!--/thanks card -->
+
+    <hr class="my-4">
+    <section class="container light"> <!-- postcards news -->
+      <div class="container py-2">
+        <div class="h1 text-center  title" id="pageHeaderTitle" style="font-size: 30px;">JORDAN NEWS</div>
+
+        <article class="postcard d-flex light blue"> <!-- 1st card -->
+          <a class="postcard__img_link" href="#">
+            <img class="postcard__img" src="img/new-1.jpg" alt="Image news" />
+          </a>
+          <div class="postcard__text t-dark">
+            <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+            <div class="postcard__subtitle small">
+              <time datetime="2023-09-20 12:00:00">
+                <i class="fas fa-calendar-alt mr-2"></i>Mon, Sep 20th 2023
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">""The Dead Sea, nestled in the Jordan Rift Valley,
+               is a unique natural wonder that captivates visitors with its extraordinary characteristics. 
+               Renowned for being one of the saltiest bodies of water on Earth, 
+               its salinity creates an environment where individuals effortlessly float on the surface.
+               The mineral-rich mud of the Dead Sea is believed to possess therapeutic properties, 
+               attracting people from around the world ."</div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+              <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+              <li class="tag__item play blue">
+                <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+              </li>
+            </ul>
+          </div>
+        </article> <!-- /1st card -->
+        <article class="postcard d-flex light red"> <!-- 2nd card -->
+          <a class="postcard__img_link" href="#">
+            <img class="postcard__img" src="img/new-2.jpg" alt="Image news" />
+          </a>
+          <div class="postcard__text t-dark">
+            <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
+            <div class="postcard__subtitle small">
+              <time datetime="2023-09-20 12:00:00">
+                <i class="fas fa-calendar-alt mr-2"></i>Mon, Sep 20th 2023
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">"Aqaba, nestled at the northern tip of the Red Sea, 
+              is a coastal gem renowned for its historical significance and stunning natural beauty. 
+              This Jordanian port city boasts a rich heritage, with archaeological sites like Ayla showcasing its millennia-old past.
+               Aqaba's strategic location has made it a crucial hub for trade and cultural exchange throughout the ages. 
+               Beyond its historical allure, Aqaba is a haven for water enthusiasts,
+                offering world-class snorkeling and diving experiences amidst vibrant coral reefs in the Gulf of Aqaba. 
+                The city's warm climate, coupled with the Red Sea's crystal-clear waters, 
+                make Aqaba a year-round destination for those seeking sun-soaked relaxation and underwater exploration. 
+                With a backdrop of arid mountains and a burgeoning modern infrastructure, Aqaba seamlessly blends the old and the new, 
+                captivating visitors with its unique charm and diverse offerings.</div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+              <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+              <li class="tag__item play red">
+                <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+              </li>
+            </ul>
+          </div>
+        </article> <!-- /2nd card -->
+        <article class="postcard d-flex  light green"> <!-- 3rd card -->
+          <a class="postcard__img_link" href="#">
+            <img class="postcard__img" src="img/new-3.jpg" alt="Image news" />
+          </a>
+          <div class="postcard__text t-dark">
+            <h1 class="postcard__title green"><a href="#">Podcast Title</a></h1>
+            <div class="postcard__subtitle small">
+              <time datetime="2023-09-20 12:00:00">
+                <i class="fas fa-calendar-alt mr-2"></i>Mon, Sep 20th 2023
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">"The majestic Ajloun Castle, a fortress built by Saladin's nephew in the 12th century,
+               is a living testament to Jordan's rich cultural heritage. The castle is strategically located on top of the hill, 
+               offering a panoramic view of the surrounding countryside. Ajloun is also home to archaeological sites such as Mar Elias and numerous ancient ruins,
+                providing insight into the region's past. "</div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+              <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+              <li class="tag__item play green">
+                <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+              </li>
+            </ul>
+          </div>
+        </article> <!-- /3rd card -->
+        <article class="postcard d-flex light yellow "> <!-- 4th card -->
+          <a class="postcard__img_link" href="#">
+            <img class="postcard__img" src="img/new-4.jpg" alt="Image news" />
+          </a>
+          <div class="postcard__text t-dark">
+            <h1 class="postcard__title yellow"><a href="#">Podcast Title</a></h1>
+            <div class="postcard__subtitle small">
+              <time datetime="2023-09-20 12:00:00">
+                <i class="fas fa-calendar-alt mr-2"></i>Mon, Sep 20th 2023
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">"Kerak Castle, perched majestically on a hill in southern Jordan, stands as a formidable testament to the region's medieval history.
+               Constructed during the Crusader period, this imposing fortress played a crucial role in the defense of the Kingdom of Jerusalem. 
+               With its strategic location overlooking the ancient trade routes, Kerak Castle boasts well-preserved halls, chambers,
+               and fortified walls that narrate tales of battles and historical intrigue."</div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+              <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+              <li class="tag__item play yellow">
+                <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+              </li>
+            </ul>
+          </div>
+        </article> <!-- /4th card -->
+      </div> <!-- /container -->
+    </section> <!-- /postcard section -->
+    <!-- join us -->
+    <h2 class="text-center text-light title" style="font-size: 30px;">Join Us</h2>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="card m-3 bg-light " style="width: 250px; box-shadow: -5px -5px 20px 10px rgb(201, 198, 241);">
+          <div class="card-body text-info d-flex flex-column text-center">
+            <h3 class="card-title mb-4">Subscribe Now
+            </h3>
+            <input class="logoicon mb-2 rounded-4" style="align-self: center;" src="img/twitter.jpg" type="image"
+              alt="icon">
+            <a href="#" target="_blank" class="card-link h4 text-info  ">Go to link</a>
+          </div>
+        </div>
+        <div class="card m-3 bg-light " style="width: 250px; box-shadow: -5px -5px 20px 10px rgb(201, 198, 241);">
+          <div class="card-body text-info d-flex flex-column text-center">
+            <h3 class="card-title mb-4">Follow
+            </h3>
+            <input class="logoicon mb-2 rounded-4" style="align-self: center;" src="img/whatsapp.jpg" type="image"
+              alt="icon">
+            <a href="" target="_blank" class="card-link h4 text-info ">Go to link</a>
+          </div>
+        </div>
+        <div class="card m-3 bg-light " style="width: 250px;  box-shadow: -5px -5px 20px 10px rgb(201, 198, 241)">
+          <div class="card-body text-info d-flex flex-column text-center">
+            <h3 class="card-title mb-4">Like the page
+            </h3>
+            <input class="logoicon mb-2 rounded-4" style="align-self: center;" src="img/linkedin.jpeg" type="image"
+              alt="icon">
+            <a href="" target="_blank" class="card-link h4 text-info ">Go to link</a>
+          </div>
+        </div>
+        <div class="card m-3 bg-light " style="width: 250px; box-shadow: -5px -5px 20px 10px rgb(201, 198, 241)">
+          <div class="card-body text-info d-flex flex-column text-center">
+            <h3 class="card-title mb-4">watch vedios
+            </h3>
+            <input class="logoicon mb-2 rounded-4" style="align-self: center;" src="img/instagram.jpg" type="image"
+              alt="icon">
+            <a href="" target="_blank" class="card-link h4 text-info ">Go to link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /join us -->
+    <!-- footer -->
+    <footer class=" text-light pb-5 bg-info">
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <hr class=" border-top border-3 border-light my-3">
+            <h5><img src="img/logo-1.jpg" alt="good pic" class="logoicon rounded-circle">&nbsp; Good Company</h5>
+            <hr class="border-top border-3 border-light my-3">
+            <address>
+              <p>Tel : 000-000-000</p>
+              <p>Address : JORDAN</p>
+              <p>Fax : 000-000-000</p>
+            </address>
+          </div>
+          <div class="col-md-4">
+            <hr class="border-top border-3 border-light my-3">
+            <h5><img src="img/logo-1.jpg" alt="good pic" class="logoicon rounded-circle ">&nbsp; Important links</h5>
+            <hr class="border-top border-3 border-light my-3">
+            <p><a href="#">Visit Us</a></p>
+            <p><a href="#">Take alook</a></p>
+            <p><a href="#">Your health is more important</a></p>
+          </div>
+          <div class="col-md-4">
+            <hr class="border-top border-3 border-light my-3">
+            <h5><img src="img/logo-1.jpg" alt="good pic" class="logoicon rounded-circle">&nbsp; Vision</h5>
+            <hr class="border-top border-3 border-light my-3">
+            <p>Serveices for all </p>
+            <p>Provide best serveices</p>
+            <p>you will be better than before</p>
+          </div>
+        </div>
+      </div>
+      <hr class="border-top border-3 border-light my-3">
+      <span class="text-center d-block title">Copyright &copy; 2023 Salsabeel Ali, Good Company. All
+        rights</span>
+      <hr class="border-top border-3 border-light my-3">
+      <!-- /footer -->
+      <!-- js -->
+    <!-- Latest compiled JavaScript -->
+<script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+    </script>
+    <script type-text="javascript">
+      function copyToClipboard(id) {
+              var from = document.getElementById(id);
+              var range = document.createRange();
+              window.getSelection().removeAllRanges();
+              range.selectNode(from);
+              window.getSelection().addRange(range);
+              document.execCommand('copy');
+              window.getSelection().removeAllRanges();
+              window.alert("تم نسخ النص.");
+       }
+      </script>
+
+          
+    </body>
+  </html>
+  
